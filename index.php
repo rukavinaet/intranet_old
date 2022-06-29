@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<!doctype html>
-<html>
-<head>
-    <link rel="stylesheet" href="">
-</head>
-<body>
-=======
 <?php include_once 'meta/con1.rg.php';
 
 ?>
@@ -205,7 +197,6 @@
 
 </div>
 
->>>>>>> a
 
 </body>
 </html>
