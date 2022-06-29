@@ -1,29 +1,4 @@
 <?php include_once 'meta/con1.rg.php';
-$docsID = '';
-
-$dm_today = date("Y-m-d");
-$query = "UPDATE DM SET DateMsg = '$dm_today' WHERE DateMsg < '$dm_today' AND StatusMsg = 'none'";
-$query_run = mysqli_query($conn, $query);
-
-$dm_index_today = date("Y-m-d");
-$sql_dm_index_today = "SELECT * FROM DM WHERE DateMsg = '$dm_index_today' ORDER BY `isImportant` ASC";
-$result_dm_index_today = mysqli_query($conn, $sql_dm_index_today);
-
-$dm_index_tomorow = date('Y-m-d', strtotime("+1 day"));
-$sql_dm_index_tomorow = "SELECT * FROM DM WHERE DateMsg = '$dm_index_tomorow' ORDER BY `isImportant` ASC";
-$result_dm_index_tomorow = mysqli_query($conn, $sql_dm_index_tomorow);
-
-$dm_index_2 = date('Y-m-d', strtotime("+2 day"));
-$sql_dm_index_2 = "SELECT * FROM DM WHERE DateMsg = '$dm_index_2' ORDER BY `isImportant` ASC";
-$result_dm_index_2 = mysqli_query($conn, $sql_dm_index_2);
-
-$dm_index_3 = date('Y-m-d', strtotime("+3 day"));
-$sql_dm_index_3 = "SELECT * FROM DM WHERE DateMsg = '$dm_index_3' ORDER BY `isImportant` ASC";
-$result_dm_index_3 = mysqli_query($conn, $sql_dm_index_3);
-
-$dm_index_4 = date('Y-m-d', strtotime("+4 day"));
-$sql_dm_index_4 = "SELECT * FROM DM WHERE DateMsg = '$dm_index_4' ORDER BY `isImportant` ASC";
-$result_dm_index_4 = mysqli_query($conn, $sql_dm_index_4);
 ?>
 <!DOCTYPE html>
 <html lang="en">
